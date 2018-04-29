@@ -1,0 +1,55 @@
+
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var shelter = {lat: 40.6797335, lng: -73.5966356};
+        var shelter2 = {lat: 40.635636, lng: -73.9737267}; 
+        var shelter3 = {lat: 40.6299668, lng: -73.9714861};
+        var shelter4 = {lat: 40.6956309, lng: -73.9843972}; 
+              
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: shelter, 
+        });
+        var marker = new google.maps.Marker({
+          position: shelter,
+          map: map
+        });
+
+         var marker2 = new google.maps.Marker({
+          position: shelter2,
+          map: map
+          
+        });
+         var marker3 = new google.maps.Marker({
+          position: shelter3,
+          map: map
+          
+        });
+
+         var marker4 = new google.maps.Marker({
+          position: shelter4,
+          map: map
+          
+        });
+      } 
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGxBiyXXex6K2GJd3BA-niClzsLYq81UI&callback=initMap">
+    </script>
+  </body>
+</html>

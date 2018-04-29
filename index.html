@@ -17,6 +17,25 @@
 
 <body> <!--Body begins HERE-->
 
+    <script> 
+        function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+            });
+            var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+            });
+        }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAGxBiyXXex6K2GJd3BA-niClzsLYq81UI&callback=initMap">
+        </script>
+
+
+
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,13 +46,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"> Placeholder Name Here</a>
+        <a class="navbar-brand" href="index.html"> Men's Safe Haven </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html"> Home <span class="sr-only">(current)</span></a></li>
           <li><a href="aboutus.html"> About Us </a></li>
             <li><a href="contacts.html"> Contact Us </a></li>
              <li><a href="donations.html"> Donate to Help Victims </a></li>
@@ -58,7 +76,7 @@
    <div id="content"><h1> Domestic Violence </h1>
     <h3> The Domestic Violence help Application! </h3>
     <hr>
-    <button class="btn btn-default btn-lg"><i class="fa fa-heart"> </i>Get Started! </button>
+    <button onclick="initMap()" class="btn btn-default btn-lg"><i class="fa fa-heart"></i>Get Started! </button>
    </div>
   </div>
  </div>
